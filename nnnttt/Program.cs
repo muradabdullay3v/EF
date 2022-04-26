@@ -13,7 +13,7 @@ namespace nnnttt
             //emp.CreateEmp(name);
             //emp.DeleteEmp(5);
             //emp.GetEmployeeByid(null);
-            emp.FilterByName("r");
+            emp.FilterByName("R");
 
             //foreach (var item in emp.GetAllEmployees())
             //{

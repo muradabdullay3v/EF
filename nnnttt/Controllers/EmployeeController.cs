@@ -81,7 +81,7 @@ namespace nnnttt.Controllers
             List<Employee> emps =  context.Company.ToList();
             foreach (var item in emps)
             {
-                if (item.Fullname.ToLower().Contains(search))
+                if (item.Fullname.ToLower().Contains(search.ToLower()))
                 {
                     var = true;
                     Console.WriteLine(item.Fullname);
