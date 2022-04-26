@@ -57,25 +57,42 @@ namespace nnnttt.Controllers
             }
         }
 
-        public void GetEmployeeByid(int id)
+        public void GetEmployeeByid(int? id)
         {
+            if (id == null)
+            {
+                Console.WriteLine("null");
+                return;
+            }
             Employee employeedb = context.Company.Find(id);
             if (employeedb != null)
             {
                 Console.WriteLine(employeedb.Fullname);
             }
+            else
+            {
+                Console.WriteLine("Uygun hecne yoxdu!!");
+            }
         }
 
         public void FilterByName(string search)
         {
+            bool var = false;
             List<Employee> emps =  context.Company.ToList();
             foreach (var item in emps)
             {
-                if (item.Fullname.Contains(search))
+                if (item.Fullname.ToLower().Contains(search))
                 {
+                    var = true;
                     Console.WriteLine(item.Fullname);
                 }
             }
+
+            if (!var)
+            {
+                Console.WriteLine("Buna uygun bir netice tapilmadi!!!");
+            }
+            var = false;
         }
     }
 }

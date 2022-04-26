@@ -11,9 +11,9 @@ namespace nnnttt
             //Console.WriteLine("Enter employee name : ");
             //string name = Console.ReadLine();
             //emp.CreateEmp(name);
-            //emp.DeleteEmp(1);
-           //emp.GetEmployeeByid(4);
-            emp.FilterByName("a");
+            //emp.DeleteEmp(5);
+            //emp.GetEmployeeByid(null);
+            emp.FilterByName("r");
 
             //foreach (var item in emp.GetAllEmployees())
             //{
